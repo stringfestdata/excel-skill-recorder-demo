@@ -1,0 +1,31 @@
+EXCEL SKILL RECORDER: COPY-READY EXERCISE
+
+1. RECORD THE DEMONSTRATION
+Open the starting workbook, then Copilot > + > Record a skill.
+Wait for the Recording indicator.
+Select F4 and paste the tab-separated block below. It adds two columns beside the existing table.
+
+Open units	Review question
+=C5-D5	Who needs to approve the replacement labels?
+=C6-D6	No follow-up needed.
+=C7-D7	When is the agreed second delivery?
+=C8-D8	What is holding this order? Context not documented.
+=C9-D9	Has the Friday pickup been confirmed?
+=C10-D10	No follow-up needed.
+
+2. EXPLAIN THE REASONING (send in Copilot while recording)
+
+The two columns I just added demonstrate a weekly order review. Open units is always Ordered minus Shipped, using Excel formulas. Review questions depend on the current Context, not a memorized customer name. A split delivery is not automatically a failure; no due dates are provided, so do not label orders late. If context is missing, say it is not documented and ask a question rather than inventing a cause. Completed orders need no follow-up. Keep the source values unchanged. Before we save the skill, tell me what belongs in deterministic formulas or automation and what needs judgment. Do not edit the sheet yet.
+
+3. STOP AND REVIEW
+Click Stop. Read Show details for each file. Save only after checking the formulas, source preservation and question rules. Note the actual skill name that Excel gives you; our test used weekly-order-review.
+
+4. CHANGE ONE ORDER
+In Orders, change D8 from 0 to 60 and E8 from blank to Complete.
+Do not edit the existing Review question. Notice that F8 changes to 0 but the old question remains until you rerun the skill.
+Start a new Copilot chat using the + at the top of the pane. Replace the skill name below if your recording uses a different name.
+
+@weekly-order-review Review tblOrders on Orders using the current values. Run the saved skill, including its bundled builder, and refresh the Review question column. Preserve the source values. Report the total open units and explain any follow-up that changed.
+
+5. CHECK
+F5:F10 should be 30, 0, 60, 0, 25, 0, totaling 115. Delta should now say No follow-up needed. Cedar should still ask about the agreed second delivery; no order should be labeled late. A5:E10 should match your edited source values. Formatting and exact wording may vary.
