@@ -14,4 +14,4 @@ The recorder drafts your own skill; its name, files, wording and availability ma
 
 The workbook uses no VBA macros and requires no local Python installation. A Microsoft account with access to the recorder is needed for the full exercise; the download itself needs no GitHub account.
 
-Article: https://stringfestanalytics.com/excel-skill-recorder-when-to-use/
+An exercise by George Mount, Stringfest Analytics: https://stringfestanalytics.com/
